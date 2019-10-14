@@ -234,7 +234,7 @@ const Index = () => {
                       </div>
                       <div className="col-md-12">
                         <fieldset>
-                          <button type="submit" id="form-submit" className="btn">Send Message</button>
+                          <button type="button" id="form-submit" className="btn">Send Message</button>
                         </fieldset>
                       </div>
                     </div>

@@ -10,7 +10,7 @@
     "start": "NODE_ENV=production node start.js",
     "clean": "rimraf dist",
     "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
-    "lint": "eslint --fix ./client/**/**.js ./server/**/**.js  --ignore-pattern client/assets/js/",
+    "lint": "eslint ./client/**/**.js ./server/**/**.js  --ignore-pattern client/assets/js/",
     "lint:server": "eslint ./server/**/**.js",
     "test": "jest",
     "test:watch": "jest --watch",
