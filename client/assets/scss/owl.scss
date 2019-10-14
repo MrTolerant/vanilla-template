@@ -36,13 +36,13 @@
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out;
 }
-  
+
 .owl-carousel .owl-item{
   float: left;
 }
 
 .owl-controls {
-  @media (max-width: @screen-sm-max) {
+  @media (max-width: null) {
     top: -120px;
   }
   top: -200px;

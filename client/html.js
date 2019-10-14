@@ -5,70 +5,63 @@ const Html = ({
   <!DOCTYPE html>
   <html>
       <head>
-      <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="/css/main.css" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/fontAwesome.css">
-      <link rel="stylesheet" href="css/hero-slider.css">
-      <link rel="stylesheet" href="css/templatemo-main.css">
-      <link rel="stylesheet" href="css/owl-carousel.css">
-
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
-      <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-      </head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/hero-slider.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        </head>
       <body>
-      <div id="root">${body}</div>
-      <script type="text/javascript" src="/js/bundle.js?v=COMMITHASH"></script>
+        <div id="root">${body}</div>
+        <script type="text/javascript" src="/js/bundle.js?v=COMMITHASH1"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script srs="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
+        <script>
+            function openCity(cityName) {
+                var i;
+                var x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                document.getElementById(cityName).style.display = "block";
+            }
+        </script>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-      <script src="js/vendor/bootstrap.min.js"></script>
-      <script src="js/plugins.js"></script>
-      <script src="js/main.js"></script>
-      <script>
-          function openCity(cityName) {
-              var i;
-              var x = document.getElementsByClassName("city");
-              for (i = 0; i < x.length; i++) {
-                 x[i].style.display = "none";  
-              }
-              document.getElementById(cityName).style.display = "block";  
-          }
-      </script>
+        <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
 
-      <script>
-          $(document).ready(function(){
-            // Add smooth scrolling to all links
-            $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
 
-              // Make sure this.hash has a value before overriding default behavior
-              if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
+                  // Store hash
+                  var hash = this.hash;
 
-                // Store hash
-                var hash = this.hash;
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
 
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                  scrollTop: $(hash).offset().top
-                }, 800, function(){
-
-                  // Add hash (#) to URL when done scrolling (default click behavior)
-                  window.location.hash = hash;
-                });
-              } // End if
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
             });
-          });
-      </script>
-
+        </script>
       </body>
   </html>
 `
